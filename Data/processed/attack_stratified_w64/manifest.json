@@ -1,0 +1,226 @@
+{
+  "input_csv": "E:\\Licaiyun\\practise\\4.RSTD_KD\\Data\\ECU-IoFT-Dataset.csv",
+  "window_size": 64,
+  "step_size": 64,
+  "window_label_rule": "highest_risk",
+  "keep_short_runs": true,
+  "train_ratio": 0.7,
+  "val_ratio": 0.15,
+  "test_ratio": 0.15,
+  "min_train_tello": 1,
+  "split_strategy": "attack_stratified",
+  "run_col": "",
+  "run_gap_sec": 60.0,
+  "window_within_run": false,
+  "attack_type_map": {
+    "No Attack": 0,
+    "Wifi Deauthentication Attack": 1,
+    "WPA2-PSK WIFI Cracking Attack": 2,
+    "TELLO API Exploit": 3
+  },
+  "risk_map": {
+    "No Attack": {
+      "id": 0,
+      "name": "normal"
+    },
+    "Wifi Deauthentication Attack": {
+      "id": 1,
+      "name": "medium"
+    },
+    "WPA2-PSK WIFI Cracking Attack": {
+      "id": 2,
+      "name": "high"
+    },
+    "TELLO API Exploit": {
+      "id": 2,
+      "name": "high"
+    }
+  },
+  "risk_alias_for_report": {
+    "0": "normal",
+    "1": "low_or_medium",
+    "2": "high"
+  },
+  "n_windows": 851,
+  "split_counts": {
+    "train": 594,
+    "test": 129,
+    "val": 128
+  },
+  "raw_attack_type_counts": {
+    "No Attack": 33127,
+    "WPA2-PSK WIFI Cracking Attack": 17263,
+    "Wifi Deauthentication Attack": 3893,
+    "TELLO API Exploit": 209
+  },
+  "window_attack_type_counts": {
+    "No Attack": 495,
+    "WPA2-PSK WIFI Cracking Attack": 274,
+    "Wifi Deauthentication Attack": 79,
+    "TELLO API Exploit": 3
+  },
+  "window_risk_counts": {
+    "normal": 495,
+    "high": 277,
+    "medium": 79
+  },
+  "attack_type_counts": {
+    "No Attack": 495,
+    "WPA2-PSK WIFI Cracking Attack": 274,
+    "Wifi Deauthentication Attack": 79,
+    "TELLO API Exploit": 3
+  },
+  "risk_counts": {
+    "normal": 495,
+    "high": 277,
+    "medium": 79
+  },
+  "split_report": {
+    "train": {
+      "n": 594,
+      "binary_counts": {
+        "0": 346,
+        "1": 248
+      },
+      "risk_id_counts": {
+        "0": 346,
+        "1": 55,
+        "2": 193
+      },
+      "risk_name_counts": {
+        "normal": 346,
+        "high": 193,
+        "medium": 55
+      },
+      "risk_alias_counts": {
+        "normal": 346,
+        "low_or_medium": 55,
+        "high": 193
+      },
+      "attack_type_id_counts": {
+        "0": 346,
+        "1": 55,
+        "2": 192,
+        "3": 1
+      },
+      "attack_type_name_counts": {
+        "No Attack": 346,
+        "WPA2-PSK WIFI Cracking Attack": 192,
+        "Wifi Deauthentication Attack": 55,
+        "TELLO API Exploit": 1
+      }
+    },
+    "val": {
+      "n": 128,
+      "binary_counts": {
+        "0": 74,
+        "1": 54
+      },
+      "risk_id_counts": {
+        "0": 74,
+        "1": 12,
+        "2": 42
+      },
+      "risk_name_counts": {
+        "normal": 74,
+        "high": 42,
+        "medium": 12
+      },
+      "risk_alias_counts": {
+        "normal": 74,
+        "low_or_medium": 12,
+        "high": 42
+      },
+      "attack_type_id_counts": {
+        "0": 74,
+        "1": 12,
+        "2": 41,
+        "3": 1
+      },
+      "attack_type_name_counts": {
+        "No Attack": 74,
+        "WPA2-PSK WIFI Cracking Attack": 41,
+        "Wifi Deauthentication Attack": 12,
+        "TELLO API Exploit": 1
+      }
+    },
+    "test": {
+      "n": 129,
+      "binary_counts": {
+        "0": 75,
+        "1": 54
+      },
+      "risk_id_counts": {
+        "0": 75,
+        "1": 12,
+        "2": 42
+      },
+      "risk_name_counts": {
+        "normal": 75,
+        "high": 42,
+        "medium": 12
+      },
+      "risk_alias_counts": {
+        "normal": 75,
+        "low_or_medium": 12,
+        "high": 42
+      },
+      "attack_type_id_counts": {
+        "0": 75,
+        "1": 12,
+        "2": 41,
+        "3": 1
+      },
+      "attack_type_name_counts": {
+        "No Attack": 75,
+        "WPA2-PSK WIFI Cracking Attack": 41,
+        "Wifi Deauthentication Attack": 12,
+        "TELLO API Exploit": 1
+      }
+    }
+  },
+  "leakage_report": {
+    "train": {
+      "n_windows": 594,
+      "time_min": "2021-09-12 04:34:00",
+      "time_max": "2021-09-13 03:29:00",
+      "n_run_groups": 176,
+      "mixed_run_windows": 182
+    },
+    "val": {
+      "n_windows": 128,
+      "time_min": "2021-09-12 22:28:00",
+      "time_max": "2021-09-13 03:29:00",
+      "n_run_groups": 38,
+      "mixed_run_windows": 36
+    },
+    "test": {
+      "n_windows": 129,
+      "time_min": "2021-09-12 22:28:00",
+      "time_max": "2021-09-13 03:29:00",
+      "n_run_groups": 16,
+      "mixed_run_windows": 12
+    },
+    "run_overlap": {
+      "train_val": 2,
+      "train_test": 2,
+      "val_test": 3
+    }
+  },
+  "compatibility_checks": {
+    "each_split_has_y_risk_0_1_2": false,
+    "train_has_attack_type_1_2_3_required_only_for_old_teacher": false,
+    "each_split_has_attack_type_0_1_2_3": false,
+    "split_strategy": "attack_stratified",
+    "compatible_teacher_student_expected": true
+  },
+  "notes": [
+    "默认采用非重叠窗口，step-size 建议等于 window-size。",
+    "attack_stratified 是模型兼容性最强的常规划分，但不是严格 time-level 验证。",
+    "run_level 保证同一 run/window_run_id 不跨 train/val/test；若 run 是自动构造的连续片段，应在论文中说明其弱替代属性。",
+    "time_level 采用过去训练、未来验证/测试，不做类别回填；若类别自然缺失，应如实报告。",
+    "y_risk=1 在现有 teacher/student 中命名为 medium；如论文写低风险，请将其解释为中低风险/较低危害攻击。",
+    "TELLO API Exploit 窗口数极少，run/time-level 下不宜夸大该类型泛化能力。",
+    "若 window_attack_type_counts 缺少 y_attack_type=1，请优先尝试 --window-label-rule highest_risk 与 --keep-short-runs。"
+  ]
+}

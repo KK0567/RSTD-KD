@@ -1,0 +1,160 @@
+{
+  "total_records": 122171,
+  "total_columns": 23,
+  "label_column": "label",
+  "classes": {
+    "Normal Traffic": 26172,
+    "Blackhole Attack": 26110,
+    "Wormhole Attack": 26086,
+    "Sybil Attack": 24077,
+    "Flooding Attack": 19726
+  },
+  "numeric_features": [
+    "FlowDuration/s",
+    "SrcPort",
+    "DstPort",
+    "TxPackets",
+    "RxPackets",
+    "LostPackets",
+    "TxBytes",
+    "RxBytes",
+    "TxPacketRate/s",
+    "RxPacketRate/s",
+    "TxByteRate/s",
+    "RxByteRate/s",
+    "MeanDelay/s",
+    "MeanJitter/s",
+    "Throughput/Kbps",
+    "MeanPacketSize",
+    "PacketDropRate",
+    "AverageHopCount"
+  ],
+  "string_features": [
+    "SrcAddr",
+    "DstAddr",
+    "Protocol",
+    "label"
+  ],
+  "imbalance_ratio": 1.326776842745615,
+  "top_correlated_features": [
+    [
+      "SrcPort",
+      0.3902641622277207
+    ],
+    [
+      "DstPort",
+      0.3902641622277207
+    ],
+    [
+      "MeanPacketSize",
+      0.3644345277815799
+    ],
+    [
+      "PacketDropRate",
+      0.19219699272355567
+    ],
+    [
+      "FlowDuration/s",
+      0.07880482293098194
+    ],
+    [
+      "AverageHopCount",
+      0.06322442361394018
+    ],
+    [
+      "RxBytes",
+      0.017198479109502552
+    ],
+    [
+      "RxPackets",
+      0.01707344427124155
+    ],
+    [
+      "MeanJitter/s",
+      0.015737016713321485
+    ],
+    [
+      "MeanDelay/s",
+      0.011591794487589195
+    ]
+  ],
+  "high_collinearity_pairs": [
+    [
+      "SrcPort",
+      "DstPort",
+      1.0
+    ],
+    [
+      "RxByteRate/s",
+      "Throughput/Kbps",
+      0.9999999999998379
+    ],
+    [
+      "RxPacketRate/s",
+      "RxByteRate/s",
+      0.9999363383303096
+    ],
+    [
+      "RxPacketRate/s",
+      "Throughput/Kbps",
+      0.9999363379106097
+    ],
+    [
+      "TxPacketRate/s",
+      "TxByteRate/s",
+      0.9994896728192403
+    ],
+    [
+      "RxPackets",
+      "RxBytes",
+      0.9971644570839362
+    ],
+    [
+      "SrcPort",
+      "MeanPacketSize",
+      0.9904789876199355
+    ],
+    [
+      "DstPort",
+      "MeanPacketSize",
+      0.9904789876199355
+    ],
+    [
+      "TxPackets",
+      "TxBytes",
+      0.9805977090189147
+    ],
+    [
+      "RxPacketRate/s",
+      "TxByteRate/s",
+      0.9259970090170339
+    ]
+  ],
+  "risk_mapping": {
+    "Normal Traffic": {
+      "level": 0,
+      "risk": "Low",
+      "count": 26172
+    },
+    "Blackhole Attack": {
+      "level": 1,
+      "risk": "Medium",
+      "count": 26110
+    },
+    "Flooding Attack": {
+      "level": 2,
+      "risk": "High",
+      "count": 19726
+    },
+    "Sybil Attack": {
+      "level": 2,
+      "risk": "High",
+      "count": 24077
+    },
+    "Wormhole Attack": {
+      "level": 2,
+      "risk": "High",
+      "count": 26086
+    }
+  }
+}
